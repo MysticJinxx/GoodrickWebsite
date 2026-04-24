@@ -11,109 +11,66 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     </head>
-<div class="page-wrapper">
+    <header>
+
+    </header>
 
     <body>
+        <div class="page-wrapper">
+        <div class="page-inner">    
 
         <div class="container">
             
-            <!--NAVBAR-->
-            <header>
-                <!-- Nav tabs -->
-                <ul
-                    class="nav nav-tabs"
-                    id="navId"
-                    role="tablist"
-                    
-                >
-                    <li class="nav-item">
-                        <a
-                            href="#tab1Id"
-                            class="nav-link active"
-                            data-bs-toggle="tab"
-                            aria-current="page"
-                            >About The Author</a
-                        >
-                    </li>
-                   
-                    <li class="nav-item" role="presentation">
-                        <a href="#tab5Id" class="nav-link" data-bs-toggle="tab"
-                            >Contact Me</a
-                        >
-                    </li>
+           
+            <!--JUMBOTRON-->
                 
-                </ul>
-                
-                <!-- Tab panes -->
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
-                        
-                    </div>
-                    <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-                    <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-                    <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-                    <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+            <!-- Full-Width Hero Section -->
+            <section class="hero-section fade-in">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-mystery">Mark Goodrick</h1>
+
+                <img src="./Images/Mark's Picture.jpeg"
+                    class="d-block mx-auto mb-4 shadow author-photo"
+                    style="max-height: 350px;">
+
+                <h4 class="text-mystery">
+                Mark Goodrick writes stories of mystery, imagination, and the hidden truths
+                that shape every life, including the Olivia Turner mystery series.
+                </h4>
+
+                <button class="btn btn-mystery btn-lg mt-3"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#learnMore">
+                        Read More
+                </button>
+
+                <div id="learnMore" class="collapse mt-4">
+                <div class="card card-body bio-panel">
+                    <p>
+                    Mark Goodrick is the author of the Olivia Turner mystery series. A lifelong reader of crime fiction and suspense, he began writing his own stories after retiring from a career in management. His work focuses on layered mysteries, psychological tension, and characters determined to uncover the truths others would rather keep hidden.
+                    </p>
+
+                    <p>
+                    Goodrick lives in Winters, Texas, where the quiet rhythms of small‑town life often remind him that every place holds stories waiting to be discovered. Through the Olivia Turner series, he follows a determined private investigator whose instincts and persistence lead her into cases filled with hidden motives, buried secrets, and the complicated truths people try to conceal.
+                    </p>
+
+                    <p>
+                    In addition to the Olivia Turner mysteries, Goodrick has written several other suspenseful works, including <em>House of Evil</em>, <em>The Last Call</em>, <em>The Shatterer</em>, and the short story collection <em>10 Around the Campfire</em>, with additional short story collections planned. When he is not writing, he enjoys playing golf, hunting, fishing, watching football, and spending time with his family, who remain one of his greatest sources of encouragement and inspiration.
+                    </p>
+
+                    <p>
+                    At the heart of his writing is a simple belief: the best stories explore mystery, imagination, and the hidden truths that shape every life.
+                    </p>
                 </div>
-                
-                <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
-                <script>
-                    var triggerEl = document.querySelector("#navId a");
-                    bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
-                </script>
-
-                <!--END NAVBAR-->
-
-                <!--JUMBOTRON-->
-                
-                <!-- Full-Width Hero Section -->
-                <section class="hero-section fade-in">
-                <div class="container text-center py-5">
-                    <h1 class="display-2 text-mystery">Mark Goodrick</h1>
-
-                    <img src="./Images/Mark's Picture.jpeg"
-                        class="d-block mx-auto mb-4 shadow author-photo"
-                        style="max-height: 350px;">
-
-                    <h4 class="text-mystery">
-                    Mark Goodrick writes stories of mystery, imagination, and the hidden truths
-                    that shape every life, including the Olivia Turner mystery series.
-                    </h4>
-
-                    <button class="btn btn-mystery btn-lg mt-3"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#learnMore">
-                    Read More
-                    </button>
-
-                    <div id="learnMore" class="collapse mt-4">
-                    <div class="card card-body bg-author-green text-mystery texture-overlay inner-glow">
-                        <p>
-                        Mark Goodrick is the author of the Olivia Turner mystery series. A lifelong reader of crime fiction and suspense, he began writing his own stories after retiring from a career in management. His work focuses on layered mysteries, psychological tension, and characters determined to uncover the truths others would rather keep hidden.
-                        </p>
-
-                        <p>
-                        Goodrick lives in Winters, Texas, where the quiet rhythms of small‑town life often remind him that every place holds stories waiting to be discovered. Through the Olivia Turner series, he follows a determined private investigator whose instincts and persistence lead her into cases filled with hidden motives, buried secrets, and the complicated truths people try to conceal.
-                        </p>
-
-                        <p>
-                        In addition to the Olivia Turner mysteries, Goodrick has written several other suspenseful works, including <em>House of Evil</em>, <em>The Last Call</em>, <em>The Shatterer</em>, and the short story collection <em>10 Around the Campfire</em>, with additional short story collections planned. When he is not writing, he enjoys playing golf, hunting, fishing, watching football, and spending time with his family, who remain one of his greatest sources of encouragement and inspiration.
-                        </p>
-
-                        <p>
-                        At the heart of his writing is a simple belief: the best stories explore mystery, imagination, and the hidden truths that shape every life.
-                        </p>
-                    </div>
-                    </div>
                 </div>
-                </section>
-
-
-                
-                <!--END JUMBOTRON-->
-            
-                <!--Carousel-->
             </div>
-            </header>
+            </section>
+       
+                
+            <!--END JUMBOTRON-->
+            
+            <!--Carousel-->
+        </div>
         <main>
 
             <div id="bookCarousel" class="carousel slide py-5" data-bs-ride="carousel">
@@ -377,8 +334,9 @@
 
         </div>
 
-
         </main>
+        </div>
+    </div>        
     </body>
         <footer>
             
@@ -390,5 +348,6 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"
         ></script>
+</div>
     </body>
 </html>
