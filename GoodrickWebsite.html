@@ -22,6 +22,7 @@
                     class="nav nav-tabs"
                     id="navId"
                     role="tablist"
+                    
                 >
                     <li class="nav-item">
                         <a
@@ -32,22 +33,7 @@
                             >About The Author</a
                         >
                     </li>
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            data-bs-toggle="dropdown"
-                            href="#"
-                            role="button"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Books</a
-                        >
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#tab2Id">Action</a>
-                            <a class="dropdown-item" href="#tab3Id">Another action</a>
-                            <a class="dropdown-item" href="#tab4Id">Action</a>
-                        </div>
-                    </li>
+                   
                     <li class="nav-item" role="presentation">
                         <a href="#tab5Id" class="nav-link" data-bs-toggle="tab"
                             >Contact Me</a
@@ -80,24 +66,280 @@
                 <div class="row align-items-md-stretch text-center">
                     <div class="container">
                         <div
-                            class="h-100 p-5 text-white bg-success border rounded-3">
-                            <h2 class="display-2">Mark Goodrick</h2>
-                            <p>
-                                Swap the background-color utility and add a `.text-*` color
-                                utility to remix the hero section look. Then, mix and match with
-                                additional component themes and more.
-                            </p>
-                            
+                            class="h-100 p-5 text-dark bg-success border rounded-3">
+                            <h1 class="display-2">Mark Goodrick</h1>
+                            <img src="./Images/Mark's Picture.jpeg"
+                                class="d-block mx-auto mb-4 shadow"
+                                style="max-height: 350px;">
+                            <h4 class="text-white">
+                                Mark Goodrick writes stories of mystery, imagination, and the hidden truths
+                                that shape every life, including the Olivia Turner mystery series.
+                            </h4>
+                            <button class="btn btn-success btn-lg" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#learnMore">
+                            Read More
+                            </button>
+
+                            <div id="learnMore" class="collapse mt-3">
+                            <div class="card card-body bg-success text-white">
+                                <p>
+                                Mark Goodrick is the author of the Olivia Turner mystery series. A lifelong reader of crime fiction and suspense, he began writing his own stories after retiring from a career in management. His work focuses on layered mysteries, psychological tension, and characters determined to uncover the truths others would rather keep hidden.
+                                </p>
+
+                                <p>
+                                Goodrick lives in Winters, Texas, where the quiet rhythms of small‑town life often remind him that every place holds stories waiting to be discovered. Through the Olivia Turner series, he follows a determined private investigator whose instincts and persistence lead her into cases filled with hidden motives, buried secrets, and the complicated truths people try to conceal.
+                                </p>
+
+                                <p>
+                                In addition to the Olivia Turner mysteries, Goodrick has written several other suspenseful works, including <em>House of Evil</em>, <em>The Last Call</em>, <em>The Shatterer</em>, and the short story collection <em>10 Around the Campfire</em>, with additional short story collections planned. When he is not writing, he enjoys playing golf, hunting, fishing, watching football, and spending time with his family, who remain one of his greatest sources of encouragement and inspiration.
+                                </p>
+
+                                <p>
+                                At the heart of his writing is a simple belief: the best stories explore mystery, imagination, and the hidden truths that shape every life.
+                                </p>
+                            </div>
+                            </div>
+
                         </div>
                     </div>
                     
                 </div>
                 
-
                 <!--END JUMBOTRON-->
+            
+            
             </div>
         </header>
-        <main></main>
+        <main>
+
+            <div id="bookCarousel" class="carousel slide py-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- House of Evil Slide -->
+                <div class="carousel-item active text-center">
+                <img src="./images/House_of_Evil.PNG" 
+                    class="d-block mx-auto mb-4 shadow" 
+                    style="max-height: 350px;" 
+                    alt="House of Evil by Mark Goodrick">
+
+                <h3 class="mb-3">House of Evil</h3>
+
+                <p class="px-3" style="max-width: 700px; margin: 0 auto;">
+                    Dive into a suspenseful and spine-tingling tale where the ordinary world collides with the paranormal. 
+                    Follow Dr. Mitchell and a team of determined individuals as they unearth the sinister secrets behind 
+                    the mirror's reflection, confronting a malevolent entity from another realm. This electrifying debut 
+                    novel takes you on a gripping journey through twists and turns of fear and courage as they confront 
+                    the unknown lurking in the shadows.
+                </p>
+
+                <a href="https://www.amazon.com/House-Evil-Mark-Goodrick/dp/B0CPPK21PL/ref=sr_1_1?crid=1U79OLZISEHAW&dib=eyJ2IjoiMSJ9.bxsO1Go6lYqnSKydY_SNdg.jP0F-45C64IqZNimeHklSB_caFNuhxuPDrtgeHtIrAI&dib_tag=se&keywords=House+of+evil+by+mark+goodrick&qid=1777005895&sprefix=house+of+evil+by+mark+goodrick%2Caps%2C201&sr=8-1" 
+                    class="btn btn-primary mt-3" 
+                    target="_blank">
+                    Buy on Amazon
+                </a>
+                </div>
+
+                <!-- The Last Call -->
+                 <div class="carousel-item text-center">
+                    <img src="./Images/The Last Call.PNG"
+                        class="d-block mx-auto mb-4 shadow"
+                        style="max-height: 350px;"
+                        alt="The Last Call by Mark Goodrick">
+
+                    <h3 class="mb-3">The Last Call</h3>
+
+                    <p class="px-3" style="max-width: 700px; margin: 0 auto;">
+                        In the gripping thriller <em>The Last Call</em>, Agent Alex Morgan confronts a relentless predator,
+                        Jacob Mercher, whose macabre masterpiece threatens everything Morgan holds dear. As secrets unravel
+                        and alliances are tested, Morgan navigates a treacherous path of betrayal, vengeance, and redemption.
+                        With the stakes higher than ever, he must face his darkest fears in a climactic showdown. Will justice
+                        prevail, or will darkness consume them all? Dive into <em>The Last Call</em> for a riveting exploration
+                        of the human psyche and the pursuit of truth in the face of unspeakable evil.
+                    </p>
+
+                    <div class="mt-3">
+                        <a href="https://www.amazon.com/Last-Call-First-Mark-Goodrick/dp/B0D368DJP8/ref=sr_1_5?crid=6WPKRMTK7I1T&dib=eyJ2IjoiMSJ9.EBE5N5YzmB2caZZFWD-VlfTookRr-hv6NiYWLQaYaqWSlrtM0K60BveeXXYJWBN_YA0Y27VgHpqIrYILhjRxisIRjVr_bmSveUHrT9i_dimGzPhDb61k-3_y5-5qs_KaxrFTUUZSQevSUj4FSmjM0G3miH8Gat70aHhm4brX25vRZu9txD-N_zizLrbdbGe7fHCAr2a1cK876gr-4fQaMmMjOr9fEDzTPYMrFFMhpPI.PJJeeW8EvxL1tD-Y9giYyUfw2wtnxTjD3kkN2mlbW_I&dib_tag=se&keywords=mark+goodrick&qid=1777006693&sprefix=mark+goodric%2Caps%2C257&sr=8-5"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Amazon
+                        </a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="https://www.barnesandnoble.com/w/the-last-call-mark-goodrick/1145646339?ean=9798887645100"
+                        class="btn btn-outline-primary btn-sm"
+                        target="_blank">
+                        Barnes & Noble eBook
+                        </a>
+                    </div>
+                </div>
+
+                <!--The Shatterer-->
+
+                <div class="carousel-item text-center">
+                    <img src="./Images/The Shatterer.JPG"
+                        class="d-block mx-auto mb-4 shadow"
+                        style="max-height: 350px;"
+                        alt="The Shatterer by Mark Goodrick">
+
+                    <h3 class="mb-3">The Shatterer</h3>
+
+                    <p class="px-3" style="max-width: 700px; margin: 0 auto;">
+                        Detective Ryan Cole is enmeshed in the gloom of rain-drenched Drayton City, chasing the enigmatic 
+                        killer known as The Shatterer alongside his partner Rita Lawrence. Engulfed by the city's dark 
+                        undercurrents and battling personal demons, Cole dives deep into its secrets, determined to find 
+                        justice. As alliances form and the past resurfaces, the pursuit becomes a complex dance with morality, 
+                        challenging the lines between right and wrong. The hunt tests loyalties and forces Cole to face his 
+                        own shadows and former ally Emma Holloway, whose path has darkly intertwined with his own. This is a 
+                        tale of unyielding resolve amid the city's sinister heartbeat, where every step toward the truth is 
+                        one further into the abyss of personal redemption.
+                    </p>
+
+                    <div class="mt-3">
+                        <a href="https://www.amazon.com/Shatterer-Mark-Goodrick/dp/B0DWY1D5VH/ref=sr_1_5?crid=6WPKRMTK7I1T&dib=eyJ2IjoiMSJ9.pVXNPRUR8_rmbS3xjCA6ySJOu1qOUtOaqu2VoovWSMRh39WD2QlsCDwP5ZChqaPtLdNZ1wuYmsCQoQlJkrOFSyjMzair_PbBWBjucHlrIYbsU9G0YJUMXPk5iDYgh8RJEIzBRdEaPnkqAq8Vv1E5LtvpwwgSx6lPTJY2wNE3Y3PMbxJ1baq56wMKaObGxq3WfHCAr2a1cK876gr-4fQaMja8TJIZIYMwwZ7w2bnFpTs.NBL_YCCieE0DqWC_txhwBOQeqqptxzbYgjOuCs1lQGE&dib_tag=se&keywords=mark+goodrick&qid=1777007786&sprefix=mark+goodric%2Caps%2C257&sr=8-5"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Amazon
+                        </a>
+                    </div>    
+                    <div class="mt-3">
+                        <a href="https://www.barnesandnoble.com/w/the-shatterer-mark-goodrick/1147010740?ean=9798896912927"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Barnes & Noble
+                        </a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="https://www.walmart.com/ip/The-Shatterer-Hardcover-9798896912927/16352818602?classType=REGULAR&from=/search"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Walmart
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <!--10 Around the Campfire-->
+
+                <div class="carousel-item text-center">
+                    <img src="./Images/10 Around the Campfire.PNG"
+                        class="d-block mx-auto mb-4 shadow"
+                        style="max-height: 350px;"
+                        alt="The Shatterer by Mark Goodrick">
+
+                    <h3 class="mb-3">10 Around the Campfire</h3>
+
+                    <p class="px-3" style="max-width: 700px; margin: 0 auto;">
+                        10 stories told the way they were meant to be told-quietly, deliberately, and without warning.
+                    </p>
+
+                    <div class="mt-3">
+                        <a href="https://www.amazon.com/Ten-Around-Campfire-Collection-Stories-ebook/dp/B0DP3NWBFG/ref=sr_1_1?crid=6WPKRMTK7I1T&dib=eyJ2IjoiMSJ9.pVXNPRUR8_rmbS3xjCA6ydKiK5uqF8D0tmht5yR9AhXsfICta_4LKE_Ys8Jjuy1MYA0Y27VgHpqIrYILhjRxiicT4hMeLzxURESoKym3yPwp_lqcj7QMKq3pnfgSAiPW2DEonFZfnsMXef0MvUcQbNvpwwgSx6lPTJY2wNE3Y3PMbxJ1baq56wMKaObGxq3WfHCAr2a1cK876gr-4fQaMmMjOr9fEDzTPYMrFFMhpPI.4C0BASoCiGnNoYTrc11ey0gZpf4skO-kHd4hCwwgjDg&dib_tag=se&keywords=mark+goodrick&qid=1777008604&sprefix=mark+goodric%2Caps%2C257&sr=8-1"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Amazon
+                        </a>
+
+                    </div>
+                </div>
+
+                <!--Oliva Turner-->
+
+                <div class="carousel-item text-center">
+                    <img src="./Images/Olivia Turner and the Case of the Vanishing Heiress.PNG"
+                        class="d-block mx-auto mb-4 shadow"
+                        style="max-height: 350px;"
+                        alt="The Shatterer by Mark Goodrick">
+
+                    <h3 class="mb-3">Olivia Turner and the Case of the Vanishing Heiress</h3>
+
+                    <p class="px-3" style="max-width: 700px; margin: 0 auto;">
+                        When a terrified woman vanishes during a violent storm, private investigator Olivia turner
+                        can't shake the feeling she's just witnessed the beginning of something far darker.
+
+                        The missing woman is Clara Ashworth, reclusive heiress to one of Hollow Bay's most powerful families.
+                        Summoned to the Ashworth estate, Olivia finds a house full of locked wings, erased records, and carefully staged lies - all pointing to a disappearance meant to look voluntary.
+                        But as Olivia and her investigative partner, Riley Cruz dig deeper, 
+                        they uncover signs of psychological manipulation, forced confinement, and a legacy built on silence.
+
+                        Every clue leads back to the fog-shrouded mansion perched on the cliffs, where someone is determined to keep the truth buried - and to discredit anyone who gets too close.
+                        Atmospheric, suspenseful, and psychologically charged, Olivia Turner and the Case of the Vanishing Heiress is a gripping
+                        mystery about truth, power, and the cost of uncovering secrets that were never meant to surface.
+                    </p>
+
+                    <div class="mt-3">
+                        <a href="https://www.amazon.com/Olivia-Turner-Case-Missing-Heiress/dp/B0GT8K12BH/ref=sr_1_4?crid=6WPKRMTK7I1T&dib=eyJ2IjoiMSJ9.pVXNPRUR8_rmbS3xjCA6ydKiK5uqF8D0tmht5yR9AhXsfICta_4LKE_Ys8Jjuy1MYA0Y27VgHpqIrYILhjRxiicT4hMeLzxURESoKym3yPwp_lqcj7QMKq3pnfgSAiPW2DEonFZfnsMXef0MvUcQbNvpwwgSx6lPTJY2wNE3Y3PMbxJ1baq56wMKaObGxq3WfHCAr2a1cK876gr-4fQaMmMjOr9fEDzTPYMrFFMhpPI.4C0BASoCiGnNoYTrc11ey0gZpf4skO-kHd4hCwwgjDg&dib_tag=se&keywords=mark+goodrick&qid=1777008604&sprefix=mark+goodric%2Caps%2C257&sr=8-4"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Amazon
+                        </a>
+                        
+                    </div>
+
+                    <div class="mt-3">
+                        <a href="https://www.barnesandnoble.com/w/olivia-turner-and-the-case-of-the-missing-heiress-mark-goodrick/1149713532?ean=9798902235880"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Barnes & Noble
+                        </a>
+                        
+                    </div>
+
+                    <div class="mt-3">
+                        <a href="https://www.walmart.com/ip/Olivia-Turner-and-the-Case-of-the-Missing-Heiress-Paperback-9798902235873/19949004553?classType=REGULAR&from=/search"
+                        class="btn btn-primary btn-sm me-2"
+                        target="_blank">
+                        Buy on Walmart
+                        </a>
+                        
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+            <style>
+                .carousel-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 0.75rem 1.5rem;
+                    border: 2px solid #fff;
+                    background: rgba(0,0,0,0.4);
+                    color: #fff;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    border-radius: 8px;
+                    transition: 0.2s ease;
+                }
+
+                .carousel-btn:hover {
+                    background: #026722;
+                    border-color: #2f2f2f;
+                }
+
+                .carousel-prev {
+                    left: 20px;
+                }
+
+                .carousel-next {
+                    right: 20px;
+                }
+                </style>
+
+                <button class="carousel-btn carousel-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+                ⟵ Previous
+                </button>
+
+                <button class="carousel-btn carousel-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+                Next ⟶
+                </button>
+
+        </div>
+
+
+        </main>
         <footer>
             
         </footer>
