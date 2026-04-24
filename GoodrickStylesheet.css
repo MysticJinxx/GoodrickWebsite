@@ -99,3 +99,143 @@
     .carousel-next {
     right: 20px;
     }
+
+    .text-strong {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(0,0,0,0.9);
+    }
+
+
+    /* Body */
+    /* ------------------------------------------
+   1. Global parchment background + scrolling texture
+    ------------------------------------------- */
+    body {
+    background-color: #f3e9d2;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    }
+
+    /* Scrolling parchment texture */
+    body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/old-wall.png");
+    opacity: 0.25;
+    z-index: -3;
+    animation: scrollTexture 60s linear infinite;
+    }
+
+    @keyframes scrollTexture {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+    }
+
+    /* Faded vignette around entire page */
+    body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+    background: radial-gradient(
+        circle,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,0.15) 100%
+    );
+    }
+
+    /* ------------------------------------------
+    2. Page wrapper (the "book page")
+    ------------------------------------------- */
+    .page-wrapper {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #fdf8ef; /* parchment interior */
+    border: 30px solid transparent;
+    border-image: url("https://www.transparenttextures.com/patterns/leather.png") 30 round;
+    border-radius: 12px;
+
+    /* Depth */
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.35),      /* outer shadow */
+        inset 0 0 25px rgba(0,0,0,0.4); /* inner shadow */
+    
+    position: relative;
+    z-index: 1;
+    }
+
+    /* ------------------------------------------
+    3. Leather spine on the left
+    ------------------------------------------- */
+    .page-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px; /* adjust distance from page */
+    width: 50px; /* spine thickness */
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/leather.png");
+    background-size: cover;
+    background-color: #3a2a1a; /* deep leather brown */
+
+    /* Depth + curvature illusion */
+    box-shadow:
+        inset -6px 0 12px rgba(0,0,0,0.6),
+        6px 0 15px rgba(0,0,0,0.4);
+
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    z-index: -1;
+    }
+
+    /* ------------------------------------------
+    4. Gold corner accents
+    ------------------------------------------- */
+    .page-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle, #c9a44f 0%, #7a5a1a 80%);
+    border-radius: 50%;
+    opacity: 0.25;
+    pointer-events: none;
+    top: -25px;
+    right: -25px;
+    z-index: -1;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+    padding: 40px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 12px;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.5);
+    }
+
+    .contact-form {
+    max-width: 600px;
+    }
+
+    .contact-form .form-control {
+    background: #fdf8ef;
+    border: 1px solid #b8a88a;
+    color: #2a2a2a;
+    }
+
+    .contact-form .form-control:focus {
+    border-color: #026722;
+    box-shadow: 0 0 8px rgba(2,103,34,0.5);
+    }
+
+    #formStatus {
+    font-size: 1.2rem;
+    font-weight: 600;
+    }
+
