@@ -141,10 +141,14 @@
     transition: 0.2s ease;
     }
 
-    .carousel-btn:hover {
-    background: #026722;
-    border-color: #2f2f2f;
-    }
+    /* Hover effect using the hero-section green (#026722) */
+.carousel-btn:hover {
+  background-color: #026722 !important;
+  border-color: #026722 !important;
+  color: #fff !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
 
     .carousel-prev {
     left: 20px;
@@ -212,6 +216,7 @@ body::after {
    2. Page wrapper (the "book page")
     ------------------------------------------- */
     .page-wrapper {
+    overflow-x: hidden;
     max-width: 1400px;
     margin: 0 auto;        /* IMPORTANT: no top margin */
     padding: 60px 40px;    /* Add spacing INSIDE instead */
@@ -266,7 +271,7 @@ body::after {
 
     /* GOLD EMBOSSED TEXT ON THE LEATHER SPINE */
     .page-wrapper::after {
-    content: "MARK GOODRICK";
+    content: "THE CHRONICLES OF GOODRICK";
     position: fixed;
 
     /* Match the spine’s position exactly */
@@ -294,30 +299,352 @@ body::after {
     
 
     /* CONTACT SECTION */
-    .contact-section {
-    padding: 40px;
-    background: rgba(0,0,0,0.25);
-    border-radius: 12px;
-    box-shadow: inset 0 0 25px rgba(0,0,0,0.5);
-    }
 
-    .contact-form {
+    .contact-form-wrapper {
     max-width: 600px;
+    margin: 0 auto;
+    margin-top: 60px;
+    }
+    
+    .contact-form-wrapper {
+    position: relative;
+    isolation: isolate; /* this is the magic */
+    z-index: 10;
+    }
+    /* Clean, readable input fields */
+    .contact-form input,
+    .contact-form textarea {
+      position: relative;        /* creates a new stacking context */
+      z-index: 10;               /* lifts caret + text above overlays */
+      background: #e2d7c2 !important;
+      color: #222 !important;
+      border: 2px solid #014d1a;
+      border-radius: 6px;
+      padding: 10px;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      mix-blend-mode: normal !important;
+      opacity: 1 !important;
     }
 
-    .contact-form .form-control {
-    background: #fdf8ef;
-    border: 1px solid #b8a88a;
-    color: #2a2a2a;
+    /* Make the typing cursor visible */
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid #026722;
+      background: #fff !important;
+      color: #000 !important;
+      caret-color: #000; /* visible typing cursor */
     }
 
-    .contact-form .form-control:focus {
-    border-color: #026722;
-    box-shadow: 0 0 8px rgba(2,103,34,0.5);
+    /*----------------------------------
+              MEDIA QUERIES
+    ----------------------------------*/
+    @media (max-width: 576px) {
+    .hero-section {
+      padding: 40px 0;
+    }
     }
 
-    #formStatus {
-    font-size: 1.2rem;
-    font-weight: 600;
+    @media (max-width: 576px) {
+    .hero-section::after {
+    box-shadow:
+      inset 0 0 10px rgba(0,0,0,0.6),
+      inset 0 0 30px rgba(0,0,0,0.4);
+    }
     }
 
+    
+
+    /* iPhone 14 / small screens */
+  @media (max-width: 430px) {
+
+  /* HERO SECTION */
+  .hero-section {
+    padding: 40px 0; /* reduce huge vertical padding */
+    text-align: center;
+  }
+
+  .hero-section::after {
+    /* soften the inset shadow so it doesn't crush the content */
+    box-shadow:
+      inset 0 0 10px rgba(0,0,0,0.6),
+      inset 0 0 25px rgba(0,0,0,0.4),
+      inset 0 0 40px rgba(0,0,0,0.3);
+  }
+
+  /* HERO TEXT */
+  .hero-section h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  /* BUTTON */
+  .btn-mystery {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* READ MORE PANEL */
+  .bio-panel {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+
+  /* CONTACT FORM */
+  .contact-form-wrapper {
+    padding: 0 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* PAGE WRAPPER / SPINE */
+  .page-wrapper {
+    margin: 0;
+    border-radius: 0; /* rounded corners look weird on mobile */
+  }
+
+  /* Prevent horizontal scrolling */
+  body, html {
+    overflow-x: hidden;
+  }
+  .hero-section {
+  padding: 28px 0;
+  }
+  }
+
+  @media (max-width: 430px) {
+
+  .author-photo {
+    width: 130px !important;   /* perfect size for iPhone 14 */
+    height: auto !important;
+    display: block;
+    margin: 0 auto 16px auto;  /* center it */
+    border-radius: 6px;
+  }
+
+}
+
+
+
+  @media (max-width: 430px) {
+
+  /* SPINE FIX */
+  .page-wrapper::before {
+    width: 40px !important;      /* thinner spine */
+    left: -20px !important;      /* pull it off-screen slightly */
+    background-size: cover;      /* keeps texture crisp */
+  }
+
+  .page-wrapper {
+    margin-left: 0 !important;   /* prevent horizontal scroll */
+    overflow-x: hidden;
+  }
+
+  /* CAROUSEL IMAGE */
+  .carousel-item img {
+    width: 80% !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* CAPTION TEXT */
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  /* BUTTONS */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 15%; /* smaller hitbox */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    transform: scale(0.7); /* shrink icons */
+  }
+
+  /* INDICATORS */
+  .carousel-indicators {
+    bottom: -10px; /* pull them down slightly */
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 6px;
+    height: 6px;
+  }
+
+  .carousel-item .card {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 430px) {
+
+  /* MOBILE SPINE */
+  .page-wrapper::before {
+    width: 32px !important;      /* slimmer spine */
+    left: 0 !important;           /* flush to the edge */
+    background-size: cover !important;
+    box-shadow:
+      inset -4px 0 8px rgba(0,0,0,0.6),
+      4px 0 10px rgba(0,0,0,0.4);
+  }
+
+  /* MOBILE GOLD TEXT */
+  .page-wrapper::after {
+    font-size: 18px !important;   /* scale down for mobile */
+    letter-spacing: 2px !important;
+
+    /* recenter based on new spine width */
+    left: calc(0px + 16px) !important; /* half of 32px */
+
+    transform: translate(-50%, -50%) rotate(-90deg) !important;
+
+    white-space: nowrap;
+  }
+
+  /* PREVENT HORIZONTAL SCROLL */
+  body, html {
+    overflow-x: hidden !important;
+  }
+}
+@media (max-width: 430px) {
+  .page-wrapper::after {
+    content: "GOODRICK";
+  }
+}
+
+
+/* FIX CUSTOM CAROUSEL BUTTONS */
+.carousel-btn {
+  position: absolute;
+  top: 50%;                 /* move buttons down so they don't overlap text */
+  transform: translateY(-50%);
+  z-index: 20;              /* keep above images and text */
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* LEFT BUTTON */
+.carousel-prev {
+  left: 10px;
+}
+
+/* RIGHT BUTTON */
+.carousel-next {
+  right: 10px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .carousel-btn {
+    top: 50%;               /* push even lower on mobile */
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .carousel-prev {
+    left: 5px;
+  }
+
+  .carousel-next {
+    right: 5px;
+  }
+}
+
+/* iPhone 14 pro max fixes */
+@media (max-width: 450px) {
+
+  .author-photo {
+    width: 120px !important;   /* slightly smaller than iPhone 14 */
+    height: auto !important;
+    margin: 0 auto 16px auto;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .page-wrapper::before {
+    width: 28px !important;     /* slightly slimmer for Pro Max */
+    left: 0 !important;
+  }
+
+  .page-wrapper::after {
+    left: 14px !important;       /* half of 28px */
+    font-size: 17px !important;  /* scale gold text down slightly */
+    letter-spacing: 2px !important;
+  }
+}
+
+/* iPhone 14 Pro Max and similar (430px width) */
+@media (max-width: 450px) {
+
+  .hero-section h1 {
+    font-size: 2.2rem !important;   /* down from Bootstrap's huge display-2 */
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-section .container {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+
+
+/* Make the carousel a positioning container */
+#bookCarousel {
+  position: relative;
+}
+
+/* Position buttons relative to the IMAGE, not the text */
+#bookCarousel .carousel-btn {
+  position: absolute;
+  top: 200px;              /* sits just below the 350px max-height image */
+  transform: translateY(-50%);
+  z-index: 20;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+
+/* Left button */
+#bookCarousel .carousel-prev {
+  left: 10px;
+}
+
+/* Right button */
+#bookCarousel .carousel-next {
+  right: 10px;
+}
+
+/* MOBILE TUNING */
+@media (max-width: 430px) {
+  #bookCarousel .carousel-btn {
+    top: 180px;            /* slightly lower for iPhone 14 */
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
